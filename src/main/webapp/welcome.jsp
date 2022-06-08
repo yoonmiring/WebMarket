@@ -27,7 +27,7 @@
             Date now =  new Date();
             SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
             %>
-            Time: <%= format.format(now)%>
+            Time!!!: <%= format.format(now)%>
         </div>
     </div>
     <footer clas="container">
