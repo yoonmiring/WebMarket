@@ -11,13 +11,16 @@
 </head>
 <body>
      <jsp:include page="menu.jsp"></jsp:include>
-    <div class="mt-4 p-5 bg-primary text-white rounded">
+     
+    <div class="mt-4 p-5 bg-primary text-white">
+    
         <div class="container">
             <h1 class="diplay-3">
                 Welcome to Web Shopping Mall
             </h1>
         </div>
     </div>
+    
     <div class="container">
         <div class="text-center">
             <h3>Welcome to Web Market!</h3>

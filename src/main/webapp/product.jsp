@@ -22,29 +22,32 @@
   
   	<div class="p-5 bg-primary text-white">
 		<div class="container">
-			<h1 class="display-3">상품 목록</h1>
+			<h1 class="display-3">상품 정보</h1>
 		</div>
 	</div>
 	
+  <%
+  String id = request.getParameter("id");
+  Product product = repository.getProductById(id);
+  %>
   <div class="container">
       <div class="row" align="center">
-        <%
-        List<Product> products = repository.getAllProducts(); 
-        for (int i =0 ;i<products.size();i++){
-            Product product = products.get(i);
-        %>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <h3><%= product.getName() %></h3>
                 <p><%= product.getDescription() %></p>
+                <p><b>상품 코드 : </b><span class="badge badge-danger"><%= product.getId() %></span></p>
+                <p><b>제조사 : </b><%= product.getManufacturer()%></p>
+                <p><b>분류 : </b><%= product.getCategory()%></p>
+                <p><b>재고 수 : </b><%= product.getUnitsInStock()%></p>
                 <p><%= product.getUnitPrice() %>원</p>
-                <p><a href="product.jsp?id=<%= product.getId() %>" class="btn btn-secondary">상세 정보 &raquo;</a></p>
+                <p><a href="" class="btn btn-info">상품 주문 &raquo;</a></p>
+                <a href="products.jsp" class="btn btn-secondary">상품 목록 &raquo;</a>
             </div>
-          <%
-            }
-          %>
+          
         </div>
       </div>
   </div>
+  
    
 	<jsp:include page="footer.jsp"></jsp:include>
   </body>

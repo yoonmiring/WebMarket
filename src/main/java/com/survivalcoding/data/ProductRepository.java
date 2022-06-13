@@ -40,4 +40,11 @@ public class ProductRepository {
 	public List<Product> getAllProducts() {
 		return products;
 	}
+	public Product getProductById(String id) {
+		// List -> Stream(데이터의 흐름)
+		return products.stream()
+				.filter((product) -> product.getId().equals(id))
+				.findFirst()
+				.get();
+	}
 }
