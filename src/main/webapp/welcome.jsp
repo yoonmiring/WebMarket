@@ -1,4 +1,7 @@
-<%@page import="java.util.Date" %><%@page import="java.text.SimpleDateFormat" %>
+<%@page import="java.util.Date" %>
+<%@page import="java.text.SimpleDateFormat" %>
+<%@page import="java.util.List" %>
+<%@page import="java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -27,7 +30,7 @@
             Date now =  new Date();
             SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
             %>
-            Time!!!: <%= format.format(now)%>
+            현재시간 : <%= format.format(now)%>
             <%
             List <String> foods = new ArrayList<>();
             foods.add("백반");
