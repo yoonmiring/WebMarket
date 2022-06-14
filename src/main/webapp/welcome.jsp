@@ -1,6 +1,5 @@
 <%@page import="java.util.Date" %><%@page import="java.text.SimpleDateFormat" %>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,6 +28,18 @@
             SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
             %>
             Time!!!: <%= format.format(now)%>
+            <%
+            List <String> foods = new ArrayList<>();
+            foods.add("백반");
+            foods.add("백반2");
+            foods.add("백반3");
+            
+            session.setAttribute("foods",foods);
+            session.setAttribute("name","정윤민");
+            session.setAttribute("age",27);
+            session.setMaxInactiveInterval(5);
+            %>
+
         </div>
     </div>
 	<jsp:include page="footer.jsp"></jsp:include>
