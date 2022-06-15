@@ -31,17 +31,7 @@
             SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
             %>
             현재시간 : <%= format.format(now)%>
-            <%
-            List <String> foods = new ArrayList<>();
-            foods.add("백반");
-            foods.add("백반2");
-            foods.add("백반3");
-            
-            session.setAttribute("foods",foods);
-            session.setAttribute("name","정윤민");
-            session.setAttribute("age",27);
-            session.setMaxInactiveInterval(5);
-            %>
+
 
         </div>
     </div>
