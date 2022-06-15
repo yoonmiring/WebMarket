@@ -6,21 +6,22 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.survivalcoding.domain.model.Product;
+import com.survivalcoding.domain.respository.ProductRepository;
 
-public class ProductRepository {
+public class ProductRepositoryImpl implements ProductRepository {
 	private List<Product> products = new ArrayList<>(); 
 	
 	//싱글턴 패턴
 	//1.static 인스턴스 준비
 	//2.static 메서드로 인스턴스 리턴(getInstance() 이름을 주로 씀)
 	//3.생성자 막기 (private)
-	private static ProductRepository instance = new ProductRepository();
+	private static ProductRepositoryImpl instance = new ProductRepositoryImpl();
 	
-	public static ProductRepository getInstance() {
+	public static ProductRepositoryImpl getInstance() {
 		return instance;
 	}
 	
-	private ProductRepository() {
+	private ProductRepositoryImpl() {
 		Product phone = new Product("P1234","iPhone 6s", 800000);
 		phone.setDescription("4.7-inch, 1334x750 Retina HD display");
 		phone.setCategory("Smart Phone");

@@ -1,4 +1,4 @@
-<%@page import="com.survivalcoding.data.ProductRepository"%>
+<%@page import="com.survivalcoding.domain.respository.ProductRepository"%>
 <%@page import="com.survivalcoding.domain.model.Product"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -29,14 +29,14 @@
       <div class="row" align="center">
             <%
             //String name = (String) session.getAttribute("name");
-            //int age = (int) session.getAttribute("age");
-            
-            out.print(session.getAttribute("foods"));
-            //싱글턴 패턴
-            ProductRepository repository = ProductRepository.getInstance();
-            List<Product> products = repository.getAllProducts();
-            for (int i = 0; i < products.size(); i++) {
-                Product product = products.get(i);
+                        //int age = (int) session.getAttribute("age");
+                        
+                        out.print(session.getAttribute("foods"));
+                        //싱글턴 패턴
+                        ProductRepository repository = ProductRepository.getInstance();
+                        List<Product> products = repository.getAllProducts();
+                        for (int i = 0; i < products.size(); i++) {
+                            Product product = products.get(i);
             %>
             <div class="col-md-4">
                <h3><%= product.getName() %></h3>

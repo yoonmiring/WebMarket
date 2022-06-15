@@ -1,4 +1,4 @@
-<%@page import="com.survivalcoding.data.ProductRepository"%>
+<%@page import="com.survivalcoding.domain.respository.ProductRepository"%>
 <%@page import="com.survivalcoding.domain.model.Product"%>
 <%@page import="java.util.List"%>
 <%@page import="java.text.SimpleDateFormat"%>
@@ -29,10 +29,10 @@
 	</div>
 	
   <%
-  ProductRepository repository = ProductRepository.getInstance();
-  String id = request.getParameter("id");
-  Product product = repository.getProductById(id);
-  %>
+	  ProductRepository repository = ProductRepository.getInstance();
+	    String id = request.getParameter("id");
+	    Product product = repository.getProductById(id);
+	  %>
   <div class="container">
       <div class="row" align="center">
             <div class="col-md-6">
