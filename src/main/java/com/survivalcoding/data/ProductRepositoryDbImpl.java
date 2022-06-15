@@ -16,7 +16,7 @@ public class ProductRepositoryDbImpl implements ProductRepository{
 	@Override
 	public List<Product> getAllProducts() {
 		// TODO Auto-generated method stub
-		return Collections.emptyList();
+		return dao.getAll();
 	}
 
 	@Override
